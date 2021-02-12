@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pyramid"
+    android:scaleType= "centerCrop"
+    android:alpha=".70">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="top"
+        >
+
+
+        <ImageView
+            android:id="@+id/quiz1_button_home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="quizOneHomeButtonClicked"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/buttonMargin"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/quiz_one_button" />
+
+        <ImageView
+            android:id="@+id/quiz2_button_home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="quizTwoHomeButtonClicked"
+            android:layout_margin="@dimen/buttonMargin"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/quiz_two_button" />
+
+        <ImageView
+            android:id="@+id/quiz3_button_home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="quizThreeHomeButtonClicked"
+            android:layout_margin="@dimen/buttonMargin"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/quiz_three_button" />
+
+        <ImageView
+            android:id="@+id/quiz4_button_home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:onClick="quizFourHomeButtonClicked"
+            android:layout_margin="@dimen/buttonMargin"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/quiz_four_button" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/buttonMargin"
+            android:src="@drawable/four_quizes"
+            android:contentDescription="@string/todo" />
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
