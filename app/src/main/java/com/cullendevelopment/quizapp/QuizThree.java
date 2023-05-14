@@ -1,5 +1,6 @@
 package com.cullendevelopment.quizapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -19,24 +20,21 @@ import java.util.Objects;
 
 public class QuizThree extends AppCompatActivity{
 
-    private View view;
 
-    /**
+
+    /*
      *
-     * @param Checkbox counter as a global variable
      */
 
-    int numberCheckedCheckbox = 0;
+
 
     /**
      *
-     *@param  ScoreThree counter as a global variable
      */
     int scoreThree = 0;
 
 
     /**
-     * @param Declaration of variables
      *
      */
     RadioGroup PenGroup;
@@ -89,7 +87,6 @@ public class QuizThree extends AppCompatActivity{
 
     /**
      *
-     * @param Checkbox counter as a global variable
      */
 
 
@@ -102,7 +99,7 @@ public class QuizThree extends AppCompatActivity{
         setContentView(R.layout.quiz_three);
 
 
-        /**
+        /*
          *
          * @param Assigns RadioButtons CheckBoxes and EditTexts to corresponding variables
          */
@@ -207,6 +204,7 @@ public class QuizThree extends AppCompatActivity{
      * Checks which Pen Group Radio button is clicked
      */
 
+    @SuppressLint("NonConstantResourceId")
     public void penGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -237,6 +235,7 @@ public class QuizThree extends AppCompatActivity{
      * Checks which william Group Radio button is clicked
      */
 
+    @SuppressLint("NonConstantResourceId")
     public void williamGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -267,6 +266,7 @@ public class QuizThree extends AppCompatActivity{
      * Checks which Presidents Group Radio button is clicked
      */
 
+    @SuppressLint("NonConstantResourceId")
     public void presidentsGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -294,6 +294,7 @@ public class QuizThree extends AppCompatActivity{
     }
 
     // Checks which WW2 Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void w_w_2GroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -321,6 +322,7 @@ public class QuizThree extends AppCompatActivity{
     }
 
     // Checks which Caesar Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void caesarGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -350,6 +352,7 @@ public class QuizThree extends AppCompatActivity{
 
 
     // Checks which Einstein Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void einsteinGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -377,6 +380,7 @@ public class QuizThree extends AppCompatActivity{
         }
     }
     // Checks which moonwalker Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void moonwalkerGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -404,6 +408,7 @@ public class QuizThree extends AppCompatActivity{
         }
     }
     // Checks which Cook Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void cookGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -431,6 +436,7 @@ public class QuizThree extends AppCompatActivity{
         }
     }
     // Checks which Nightingale Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void nightingaleGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -513,21 +519,21 @@ public class QuizThree extends AppCompatActivity{
         }
 
 
-        /**
+        /*
          * Pops up score as toast message out of twenty-four - 2 points for each correct answer.
          */
+        //Zeros score so that extra presses of the submit answers button doesn't multiply score if score less than maximum.
         if (scoreThree == 20) {
             Toast.makeText(this, "Congratulations you have scored a maximum twenty points!", Toast.LENGTH_LONG).show();
-            scoreThree = 0;//Zeros score so that extra presses of the submit answers button doesn't multiply score.
 
         }
-        /**
+        /*
          *  Pops up score if less than fourteen
          */
         else {
             Toast.makeText(this, "You have scored " + scoreThree + " points!", Toast.LENGTH_LONG).show();
-            scoreThree = 0;//Zeros score so that extra presses of the submit answers button doesn't multiply score if score less than maximum.
         }
+        scoreThree = 0;//Zeros score so that extra presses of the submit answers button doesn't multiply score.
     }
 
     //Resets all Check boxes, Radio Buttons and Text input answers and resets integer variables.

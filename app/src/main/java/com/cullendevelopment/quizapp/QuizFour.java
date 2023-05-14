@@ -1,5 +1,6 @@
 package com.cullendevelopment.quizapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -19,17 +20,15 @@ import java.util.Objects;
 
 public class QuizFour extends AppCompatActivity{
 
-    private View view;
+
 
     /**
      *
-     *@param  ScoreFour counter as a global variable
      */
     int scoreFour = 0;
 
 
     /**
-     * @param Declaration of variables
      *
      */
     RadioGroup GizaGroup;
@@ -84,12 +83,10 @@ public class QuizFour extends AppCompatActivity{
 
     /**
      *
-     * @param Checkbox counter as a global variable
      */
 
 
     public static final String SCOREFOUR = "SCORE_KEY";
-
 
 
     @Override
@@ -97,7 +94,7 @@ public class QuizFour extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_four);
 
-        /**
+        /*
          *
          * @param Assigns RadioButtons CheckBoxes and EditTexts to corresponding variables
          */
@@ -207,6 +204,7 @@ public class QuizFour extends AppCompatActivity{
      * Checks which Giza Group Radio button is clicked
      */
 
+    @SuppressLint("NonConstantResourceId")
     public void gizaGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -237,6 +235,7 @@ public class QuizFour extends AppCompatActivity{
      * Checks which WW1 Group Radio button is clicked
      */
 
+    @SuppressLint("NonConstantResourceId")
     public void wwiGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -267,6 +266,7 @@ public class QuizFour extends AppCompatActivity{
      * Checks which Dead Presidents Group Radio button is clicked
      */
 
+    @SuppressLint("NonConstantResourceId")
     public void deadPresidentsGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -302,6 +302,7 @@ public class QuizFour extends AppCompatActivity{
     }
 
     // Checks which Cars Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void carsGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -329,6 +330,7 @@ public class QuizFour extends AppCompatActivity{
     }
 
     // Checks which Pyramids Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void pyramidsGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -357,6 +359,7 @@ public class QuizFour extends AppCompatActivity{
     }
 
     // Checks which Moonwalkers Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void moonwalkersGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -385,6 +388,7 @@ public class QuizFour extends AppCompatActivity{
         }
     }
     // Checks which Ages Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void agesGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -412,6 +416,7 @@ public class QuizFour extends AppCompatActivity{
         }
     }
     // Checks which Tudor Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void tudorGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -439,6 +444,7 @@ public class QuizFour extends AppCompatActivity{
         }
     }
     // Checks which Spitfires Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void spitfiresGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -532,21 +538,21 @@ public class QuizFour extends AppCompatActivity{
             //adds two points for a correct answer
         }
 
-        /**
+        /*
          * Pops up score as toast message out of twenty-four - 2 points for each correct answer.
          */
+        //Zeros score so that extra presses of the submit answers button doesn't multiply score if score less than maximum.
         if (scoreFour == 20) {
             Toast.makeText(this, "Congratulations you have scored a maximum twenty points!", Toast.LENGTH_LONG).show();
-            scoreFour = 0;//Zeros score so that extra presses of the submit answers button doesn't multiply score.
 
         }
-        /**
+        /*
          *  Pops up score if less than fourteen
          */
         else {
             Toast.makeText(this, "You have scored " + scoreFour + " points!", Toast.LENGTH_LONG).show();
-            scoreFour = 0;//Zeros score so that extra presses of the submit answers button doesn't multiply score if score less than maximum.
         }
+        scoreFour = 0;//Zeros score so that extra presses of the submit answers button doesn't multiply score.
     }
 
     //Resets all Check boxes, Radio Buttons and Text input answers and resets integer variables.
@@ -555,7 +561,7 @@ public class QuizFour extends AppCompatActivity{
         //zeros score
 
 
-        //clears radiobuttons
+        //clears radiobutton
         GizaGroup.clearCheck();
         WW1Group.clearCheck();
         DeadPresidentsGroup.clearCheck();

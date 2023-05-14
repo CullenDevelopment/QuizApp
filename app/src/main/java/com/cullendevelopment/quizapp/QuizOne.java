@@ -20,7 +20,7 @@ import java.util.Objects;
 
 public class QuizOne extends AppCompatActivity{
 
-    private View view;
+
 
     /**
      *
@@ -91,7 +91,7 @@ public class QuizOne extends AppCompatActivity{
 
 
     public static final String SCOREONE = "SCORE_KEY";
-    private Bundle savedInstanceState;
+
 
 
     @Override
@@ -239,13 +239,16 @@ public class QuizOne extends AppCompatActivity{
             // the checkbox either got unchecked
             // or there are less than 2 other checkboxes checked
             // change your counter accordingly
-            if (checked)
+            if (checked) {
                 numberCheckedCheckbox++;
                 // Scotland clicked
+            }
 
-            else if (!checked)
+            else {
+
                 numberCheckedCheckbox--;
-        //needs to be in as doesn't allow changing selection otherwise.
+                //needs to be in as doesn't allow changing selection otherwise.
+            }
 
 
         //Show pop-up message if number of checkboxes checked exceeds two
@@ -270,13 +273,15 @@ public class QuizOne extends AppCompatActivity{
             // the checkbox either got unchecked
             // or there are less than 2 other checkboxes checked
             // change your counter accordingly
-            if (checked)
+            if (checked) {
                 numberCheckedCheckbox++;
                 // Sweden clicked
+            }
 
-            else if (!checked)
+            else {
                 numberCheckedCheckbox--;
-        //needs to be in as doesn't allow changing selection otherwise.
+                //needs to be in as doesn't allow changing selection otherwise.
+            }
 
 
         //Show pop-up message if number of checkboxes checked exceeds two
@@ -301,14 +306,16 @@ public class QuizOne extends AppCompatActivity{
             // the checkbox either got unchecked
             // or there are less than 2 other checkboxes checked
             // change your counter accordingly
-            if (checked)
+            if (checked) {
                 numberCheckedCheckbox++;
                 // Norway clicked
+            }
 
 
-            else if (!checked)
+            else {
                 numberCheckedCheckbox--;
-        //needs to be in as doesn't allow changing selection otherwise.
+                //needs to be in as doesn't allow changing selection otherwise.
+            }
 
 
         //Show pop-up message if number of checkboxes checked exceeds two
@@ -333,13 +340,15 @@ public class QuizOne extends AppCompatActivity{
             // the checkbox either got unchecked
             // or there are less than 2 other checkboxes checked
             // change your counter accordingly
-            if (checked)
+            if (checked) {
                 numberCheckedCheckbox++;
                 // Rome clicked
+            }
 
-            else if (!checked)
+            else {
                 numberCheckedCheckbox--;
-        //needs to be in as doesn't allow changing selection otherwise.
+                //needs to be in as doesn't allow changing selection otherwise.
+            }
 
 
         //Show pop-up message if number of checkboxes checked exceeds two
@@ -364,13 +373,15 @@ public class QuizOne extends AppCompatActivity{
             // the checkbox either got unchecked
             // or there are less than 2 other checkboxes checked
             // change your counter accordingly
-            if (checked)
+            if (checked) {
                 numberCheckedCheckbox++;
                 // Denmark clicked
+            }
 
-            else if (!checked)
+            else {
                 numberCheckedCheckbox--;
-        //needs to be in as doesn't allow changing selection otherwise.
+                //needs to be in as doesn't allow changing selection otherwise.
+            }
 
 
         //Show pop-up message if number of checkboxes checked exceeds three
@@ -698,7 +709,7 @@ public class QuizOne extends AppCompatActivity{
         numberCheckedCheckbox = 0;
         //zeros number of check boxes clicked variable.
 
-        //clears radiobuttons
+        //clears radiobutton
         RomanGroup.clearCheck();
         w_w_2Group.clearCheck();
         FlowersGroup.clearCheck();

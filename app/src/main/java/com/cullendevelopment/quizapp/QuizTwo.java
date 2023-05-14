@@ -1,5 +1,6 @@
 package com.cullendevelopment.quizapp;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -19,24 +20,21 @@ import java.util.Objects;
 
 public class QuizTwo extends AppCompatActivity{
 
-    private View view;
+
 
     /**
      *
-     * @param Checkbox counter as a global variable
      */
 
     int numberCheckedCheckbox = 0;
 
     /**
      *
-     *@param  ScoreTwo counter as a global variable
      */
     int scoreTwo = 0;
 
 
     /**
-     * @param Declaration of variables
      *
      */
     RadioGroup HenryBirthdayGroup;
@@ -85,7 +83,6 @@ public class QuizTwo extends AppCompatActivity{
 
     /**
      *
-     * @param Checkbox counter as a global variable
      */
 
 
@@ -99,7 +96,7 @@ public class QuizTwo extends AppCompatActivity{
 
 
 
-        /**
+        /*
          *
          * @param Assigns RadioButtons CheckBoxes and EditTexts to corresponding variables
          */
@@ -192,6 +189,7 @@ public class QuizTwo extends AppCompatActivity{
      * Checks which Henry Birthday Group Radio button is clicked
      */
 
+    @SuppressLint("NonConstantResourceId")
     public void henryBirthdayGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -209,6 +207,7 @@ public class QuizTwo extends AppCompatActivity{
         }
     }
 
+    @SuppressLint("NonConstantResourceId")
     public void castleConstructionGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -239,6 +238,7 @@ public class QuizTwo extends AppCompatActivity{
      * Checks which Victoria Group Radio button is clicked
      */
 
+    @SuppressLint("NonConstantResourceId")
     public void victoriaGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -266,6 +266,7 @@ public class QuizTwo extends AppCompatActivity{
     }
 
     // Checks which Viking Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void vikingGroupClicked(View view) {
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -293,6 +294,7 @@ public class QuizTwo extends AppCompatActivity{
     }
 
     // Checks which Arthur Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void arthurGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -321,6 +323,7 @@ public class QuizTwo extends AppCompatActivity{
     }
 
     // Checks which Spitfire Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void spitfireGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -349,6 +352,7 @@ public class QuizTwo extends AppCompatActivity{
         }
     }
     // Checks which American Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void americanGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -361,7 +365,7 @@ public class QuizTwo extends AppCompatActivity{
                     break;
             case R.id.independence:
                 if (checked)
-                    // if indepndence checked
+                    // if independence checked
                     break;
 
             case R.id.liberty:
@@ -376,6 +380,7 @@ public class QuizTwo extends AppCompatActivity{
         }
     }
     // Checks which Babylons Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void babylonGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -393,6 +398,7 @@ public class QuizTwo extends AppCompatActivity{
         }
     }
     // Checks which Hades Group Radio button is clicked
+    @SuppressLint("NonConstantResourceId")
     public void hadesGroupClicked(View view) {
         // Is the view now checked?
         boolean checked = ((RadioButton) view).isChecked();
@@ -475,21 +481,21 @@ public class QuizTwo extends AppCompatActivity{
         }
 
 
-        /**
+        /*
          * Pops up score as toast message out of twenty - 2 points for each correct answer.
          */
+        //Zeros score so that extra presses of the submit answers button doesn't multiply score if score less than maximum.
         if (scoreTwo == 20) {
             Toast.makeText(this, "Congratulations you have scored a maximum twenty points!", Toast.LENGTH_LONG).show();
-            scoreTwo = 0;//Zeros score so that extra presses of the submit answers button doesn't multiply score.
 
         }
-        /**
+        /*
          *  Pops up score if less than twenty
          */
         else {
             Toast.makeText(this, "You have scored " + scoreTwo + " points!", Toast.LENGTH_LONG).show();
-            scoreTwo = 0;//Zeros score so that extra presses of the submit answers button doesn't multiply score if score less than maximum.
         }
+        scoreTwo = 0;//Zeros score so that extra presses of the submit answers button doesn't multiply score.
     }
 
     //Resets all Check boxes, Radio Buttons and Text input answers and resets integer variables.

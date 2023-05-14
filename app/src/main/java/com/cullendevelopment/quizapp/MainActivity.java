@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
 
-    private View view;
+
 
     public static final String SCORE = "SCORE_KEY";
 
